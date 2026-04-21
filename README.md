@@ -7,7 +7,7 @@ NLP — Fine-tuning a Transformer (< 2B parameters) to handle ambiguity in Hindi
 ## Problem Statement
 Ambiguity in NLP occurs when a word or sentence has multiple possible interpretations. Hindi is especially challenging due to its morphological richness and code-switching (Hinglish).
 
-# Types of Ambiguity Covered
+## Types of Ambiguity Covered
 | Type | Example | Meanings |
 | Time Ambiguity | कल | yesterday / tomorrow |
 | Morphological | सोना | sleep / gold |
@@ -20,9 +20,8 @@ Ambiguity in NLP occurs when a word or sentence has multiple possible interpreta
 | Place | place name vs common noun | ambiguous reference |
 | Object-Action | object vs action meaning | same word, different role |
 
-# Model Details
+## Model Details
 | Component | Detail |
-|-----------|--------|
 | Base Model | Qwen/Qwen2.5-0.5B |
 | Parameters | ~500M (under 2B limit) |
 | Method | LoRA (PEFT) |
@@ -31,25 +30,25 @@ Ambiguity in NLP occurs when a word or sentence has multiple possible interpreta
 | Training | 3 epochs, SFTTrainer, fp16 |
 | Platform | Kaggle (T4 GPU) |
 
-# Dataset
+## Dataset
 - 1000 annotated Hindi sentences
 - 10 ambiguity categories
 - 391 unique ambiguous words
 - Custom annotated
 
-# How to Run
+## How to Run
 1. Open `hindi_ambiguity_nlp_qwen_lora.ipynb` on Kaggle
 2. Add `hindi_ambiguity_dataset.csv` as a Kaggle dataset
 3. Enable GPU T4 and Internet
 4. Run all cells
 
-# Results
+## Results
 Model successfully learns to disambiguate Hindi words based on context.
 Example:
 - `कल वह बाज़ार गया था` → कल = **yesterday**
 - `कल हम दिल्ली जाएंगे` → कल = **tomorrow**
 
-# Tech Stack
+## Tech Stack
 - Python 3.10
 - PyTorch
 - HuggingFace Transformers
