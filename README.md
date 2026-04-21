@@ -1,12 +1,13 @@
 # Hindi Ambiguity Resolution using Qwen2.5 + LoRA
 
-NLP — Fine-tuning a Transformer (< 2B parameters) to handle ambiguity in Hindi language.
+NLP Assignment — Fine-tuning a Transformer (< 2B parameters) to handle ambiguity in Hindi language.
 
 ## Problem Statement
 Ambiguity in NLP occurs when a word or sentence has multiple possible interpretations. Hindi is especially challenging due to its morphological richness and code-switching (Hinglish).
 
 ## Types of Ambiguity Covered
 | Type | Example | Meanings |
+|------|---------|----------|
 | Time Ambiguity | कल | yesterday / tomorrow |
 | Morphological | सोना | sleep / gold |
 | Pronoun | वह गया | who left? |
@@ -20,6 +21,7 @@ Ambiguity in NLP occurs when a word or sentence has multiple possible interpreta
 
 ## Model Details
 | Component | Detail |
+|-----------|--------|
 | Base Model | Qwen/Qwen2.5-0.5B |
 | Parameters | ~500M (under 2B limit) |
 | Method | LoRA (PEFT) |
